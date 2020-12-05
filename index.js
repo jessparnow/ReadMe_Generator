@@ -6,7 +6,6 @@ const util = require("util");
 // array of questions for user
 promptUser = () =>
   inquirer.prompt([
-    //name of file Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
     {
       type: "input",
       name: "name",
@@ -57,13 +56,7 @@ promptUser = () =>
       name: "github",
       message: "Add a link to your github profile",
     }
- 
   ]);
-
-// const questions = [
-
-// ];
-
 //info to generate to file
 const generateREADME = (answers) =>
   //add the data to go into the readme
@@ -95,15 +88,6 @@ promptUser()
   .then(() => console.log("Successfully wrote to READMEEXAMPLE.md"))
   .catch((err) => console.error(err));
 
-  // function to write README file
-// function writeToFile(fileName, data) {
-// }
 
-// function to initialize program
-function init() {}
-
-// function call to initialize program
-init();
 
 const writeFileAsync = util.promisify(fs.writeFile);
-//prompts to get info to write to file
